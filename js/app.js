@@ -6273,53 +6273,57 @@
             const prevBtn = document.querySelectorAll(".form-step__btn-prev");
             const nextBtn = document.querySelectorAll(".form-step__btn-next");
             const form = document.querySelector(".calculator__form");
-            form.addEventListener("submit", (e => e.preventDefault()));
-            let formStep = 0;
-            prevBtn.forEach((prev => {
-                prev.addEventListener("click", (e => {
-                    formStep--;
-                    updateFormSteps();
+            if (form) {
+                form.addEventListener("submit", (e => e.preventDefault()));
+                let formStep = 0;
+                prevBtn.forEach((prev => {
+                    prev.addEventListener("click", (e => {
+                        formStep--;
+                        updateFormSteps();
+                    }));
                 }));
-            }));
-            nextBtn.forEach((next => {
-                next.addEventListener("click", (e => {
-                    formStep++;
-                    updateFormSteps();
+                nextBtn.forEach((next => {
+                    next.addEventListener("click", (e => {
+                        formStep++;
+                        updateFormSteps();
+                    }));
                 }));
-            }));
-            function updateFormSteps() {
-                steps.forEach((step => {
-                    if (step.classList.contains("form-step--active")) step.classList.remove("form-step--active");
-                    steps[formStep].classList.add("form-step--active");
-                }));
-            }
-            updateFormSteps();
-        }
-        stepForm();
-        let observer = new IntersectionObserver((function(entries) {
-            entries.forEach((function(entry) {
-                if (entry.isIntersecting) {
-                    const counters = document.querySelectorAll(".anim-number");
-                    const speed = 400;
-                    counters.forEach((counter => {
-                        const animate = () => {
-                            const value = +counter.getAttribute("akhi");
-                            const data = +counter.innerText;
-                            const time = value / speed;
-                            if (data < value) {
-                                counter.innerText = Math.ceil(data + time);
-                                setTimeout(animate, 1);
-                            } else counter.innerText = value;
-                        };
-                        animate();
+                function updateFormSteps() {
+                    steps.forEach((step => {
+                        if (step.classList.contains("form-step--active")) step.classList.remove("form-step--active");
+                        steps[formStep].classList.add("form-step--active");
                     }));
                 }
-            }));
-        }));
+                updateFormSteps();
+            }
+        }
+        stepForm();
         let oneNumber = document.querySelector(".algorithm-card__number-one");
         let twoNumber = document.querySelector(".algorithm-card__number-two");
-        observer.observe(oneNumber);
-        observer.observe(twoNumber);
+        if (oneNumber || twoNumber) {
+            let observer = new IntersectionObserver((function(entries) {
+                entries.forEach((function(entry) {
+                    if (entry.isIntersecting) {
+                        const counters = document.querySelectorAll(".anim-number");
+                        const speed = 400;
+                        counters.forEach((counter => {
+                            const animate = () => {
+                                const value = +counter.getAttribute("akhi");
+                                const data = +counter.innerText;
+                                const time = value / speed;
+                                if (data < value) {
+                                    counter.innerText = Math.ceil(data + time);
+                                    setTimeout(animate, 1);
+                                } else counter.innerText = value;
+                            };
+                            animate();
+                        }));
+                    }
+                }));
+            }));
+            observer.observe(oneNumber);
+            observer.observe(twoNumber);
+        }
         window["FLS"] = true;
         isWebp();
         spollers();
