@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230624182658">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230625122406">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll="200" class="header" data-lp>
 			<div class="header__container flex">
 				<a href="index.html" class="header__logo logo flex">
 					<svg width="80" height="53.66" viewBox="0 0 80 53.66" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,8 +30,8 @@
 					<nav class="menu__body">
 						<ul class="menu__list list-reset flex">
 							<li class="menu__item"><a href="#" class="menu__link link--anim">Главная</a></li>
-							<li class="menu__item"><a href="#" class="menu__link link--anim">Услуги</a></li>
-							<li class="menu__item"><a href="#" class="menu__link link--anim">Контакты</a></li>
+							<li class="menu__item"><a href="#" class="menu__link link--anim" data-goto=".services">Услуги</a></li>
+							<li class="menu__item"><a href="#" class="menu__link link--anim" data-goto=".contacts">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -207,8 +207,22 @@
 			</div>
 		</footer>
 	</div>
-
-	<script src="js/app.min.js?_v=20230624182658"></script>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close btn-reset" aria-label="Закрыть"></button>
+				<div class="popup__text">
+					<div class="request flex">
+						<h3 class="request__title">Спасибо! Ваша заявка принята!</h3>
+						<div class="request__description">Мы рассмотрим Вашу заявку и сразу
+							Вам отправим ответ, спасибо за обращение к нам!</div>
+						<picture><source data-srcset="img/success.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="request__success" data-src="img/success.png" alt="Зелёная галочка" width="70" height="70"></picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230625122406"></script>
 </body>
 
 </html>
