@@ -4758,7 +4758,10 @@
         isWebp();
         spollers();
         aos.init({
-            disable: "phone"
+            disable: "phone",
+            once: true,
+            easing: "ease",
+            duration: 1500
         });
         pageNavigation();
         headerScroll();
