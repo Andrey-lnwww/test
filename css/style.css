@@ -5685,12 +5685,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     padding-bottom: 6.25rem;
   }
 
-  .form-step__content-range {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
   .gallery__container {
     padding-top: 6.25rem;
   }
@@ -5857,6 +5851,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+
+  .form-step__content-range {
+    -webkit-column-gap: 3.125rem;
+       -moz-column-gap: 3.125rem;
+            column-gap: 3.125rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .form-step__list {
