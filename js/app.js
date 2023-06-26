@@ -6428,8 +6428,6 @@
             }
         }
         stepForm();
-        let number_1 = document.querySelector(".algorithm-card__number-one");
-        let number_2 = document.querySelector(".algorithm-card__number-two");
         if (number_2 || number_1) {
             let numberTop = number_1.getBoundingClientRect().top;
             let start_1 = +number_1.innerHTML;
