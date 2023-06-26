@@ -6400,51 +6400,51 @@
         const da = new DynamicAdapt("max");
         da.init();
         function stepForm() {
-            const steps = document.querySelectorAll(".form-step");
-            const prevBtn = document.querySelectorAll(".form-step__btn-prev");
-            const nextBtn = document.querySelectorAll(".form-step__btn-next");
             const form = document.querySelector(".calculator__form");
-            const formStep = form.querySelectorAll(".form-step");
             if (form) {
-                let formStep = 0;
+                const steps = document.querySelectorAll(".form-step");
+                const prevBtn = document.querySelectorAll(".form-step__btn-prev");
+                const nextBtn = document.querySelectorAll(".form-step__btn-next");
+                const formStep = form.querySelectorAll(".form-step");
+                let formStepCounter = 0;
                 prevBtn.forEach((prev => {
                     prev.addEventListener("click", (e => {
-                        formStep--;
+                        formStepCounter--;
                         updateFormSteps();
                     }));
                 }));
                 nextBtn.forEach((next => {
                     next.addEventListener("click", (e => {
                         updateCheckbox();
-                        formStep++;
+                        formStepCounter++;
                         updateFormSteps();
                     }));
                 }));
                 function updateFormSteps() {
                     steps.forEach((step => {
                         if (step.classList.contains("form-step--active")) step.classList.remove("form-step--active");
-                        steps[formStep].classList.add("form-step--active");
+                        steps[formStepCounter].classList.add("form-step--active");
                     }));
                 }
                 updateFormSteps();
-            }
-            function updateCheckbox() {
-                formStep.forEach((formStepItem => {
-                    const checkboxes = formStepItem.querySelectorAll("input[type=checkbox]");
-                    const nextBtnStep = formStepItem.querySelector(".form-step__btn-next");
-                    if (checkboxes.length >= 0) checkboxes.forEach((checkbox => {
-                        checkbox.addEventListener("change", (e => {
-                            let countCheckbox = 0;
-                            if (checkbox.checked) {
-                                countCheckbox++;
-                                console.log(countCheckbox);
-                            }
-                            if (countCheckbox >= 1) nextBtnStep.removeAttribute("disabled"); else nextBtnStep.setAttribute("disabled", "");
+                function updateCheckbox() {
+                    formStep.forEach((formStepItem => {
+                        const checkboxes = formStepItem.querySelectorAll("input[type=checkbox]");
+                        const nextBtnStep = formStepItem.querySelector(".form-step__btn-next");
+                        if (checkboxes.length >= 0) checkboxes.forEach((checkbox => {
+                            checkbox.addEventListener("change", (e => {
+                                let countCheckbox = 0;
+                                if (checkbox.checked) {
+                                    countCheckbox++;
+                                    console.log(countCheckbox);
+                                }
+                                if (countCheckbox >= 1) nextBtnStep.removeAttribute("disabled"); else nextBtnStep.setAttribute("disabled", "");
+                            }));
                         }));
                     }));
-                }));
+                }
+                updateCheckbox();
             }
-            updateCheckbox();
         }
         stepForm();
         let oneNumber = document.querySelector(".algorithm-card__number-one");
