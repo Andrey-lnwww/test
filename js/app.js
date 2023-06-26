@@ -2330,7 +2330,7 @@
     }
     (() => {
         "use strict";
-        const modules_flsModules = {};
+        const flsModules = {};
         function isWebp() {
             function testWebP(callback) {
                 let webP = new Image;
@@ -2535,7 +2535,7 @@
             bodyUnlock();
             document.documentElement.classList.remove("menu-open");
         }
-        function functions_FLS(message) {
+        function FLS(message) {
             setTimeout((() => {
                 if (window.FLS) ;
             }), 0);
@@ -2824,10 +2824,10 @@
                 if (!this.isOpen && this.lastFocusEl) this.lastFocusEl.focus(); else focusable[0].focus();
             }
             popupLogging(message) {
-                this.options.logging ? functions_FLS(`[Попапос]: ${message}`) : null;
+                this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
             }
         }
-        modules_flsModules.popup = new Popup({});
+        flsModules.popup = new Popup({});
         class MousePRLX {
             constructor(props, data = null) {
                 let defaultConfig = {
@@ -2879,12 +2879,12 @@
                 }));
             }
             setLogging(message) {
-                this.config.logging ? functions_FLS(`[PRLX Mouse]: ${message}`) : null;
+                this.config.logging ? FLS(`[PRLX Mouse]: ${message}`) : null;
             }
         }
-        modules_flsModules.mousePrlx = new MousePRLX({});
+        flsModules.mousePrlx = new MousePRLX({});
         var aos = __webpack_require__(711);
-        let gotoblock_gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
+        let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
             const targetBlockElement = document.querySelector(targetBlock);
             if (targetBlockElement) {
                 let headerItem = "";
@@ -2919,9 +2919,140 @@
                         behavior: "smooth"
                     });
                 }
-                functions_FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
-            } else functions_FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
+                FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
+            } else FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
         };
+        let formValidate = {
+            getErrors(form) {
+                let error = 0;
+                let formRequiredItems = form.querySelectorAll("*[data-required]");
+                if (formRequiredItems.length) formRequiredItems.forEach((formRequiredItem => {
+                    if ((formRequiredItem.offsetParent !== null || formRequiredItem.tagName === "SELECT") && !formRequiredItem.disabled) error += this.validateInput(formRequiredItem);
+                }));
+                return error;
+            },
+            validateInput(formRequiredItem) {
+                let error = 0;
+                if (formRequiredItem.dataset.required === "email") {
+                    formRequiredItem.value = formRequiredItem.value.replace(" ", "");
+                    if (this.emailTest(formRequiredItem)) {
+                        this.addError(formRequiredItem);
+                        error++;
+                    } else this.removeError(formRequiredItem);
+                } else if (formRequiredItem.type === "checkbox" && !formRequiredItem.checked) {
+                    this.addError(formRequiredItem);
+                    error++;
+                } else if (!formRequiredItem.value.trim()) {
+                    this.addError(formRequiredItem);
+                    error++;
+                } else this.removeError(formRequiredItem);
+                return error;
+            },
+            addError(formRequiredItem) {
+                formRequiredItem.classList.add("_form-error");
+                formRequiredItem.parentElement.classList.add("_form-error");
+                let inputError = formRequiredItem.parentElement.querySelector(".form__error");
+                if (inputError) formRequiredItem.parentElement.removeChild(inputError);
+                if (formRequiredItem.dataset.error) formRequiredItem.parentElement.insertAdjacentHTML("beforeend", `<div class="form__error">${formRequiredItem.dataset.error}</div>`);
+            },
+            removeError(formRequiredItem) {
+                formRequiredItem.classList.remove("_form-error");
+                formRequiredItem.parentElement.classList.remove("_form-error");
+                if (formRequiredItem.parentElement.querySelector(".form__error")) formRequiredItem.parentElement.removeChild(formRequiredItem.parentElement.querySelector(".form__error"));
+            },
+            formClean(form) {
+                form.reset();
+                setTimeout((() => {
+                    let inputs = form.querySelectorAll("input,textarea");
+                    for (let index = 0; index < inputs.length; index++) {
+                        const el = inputs[index];
+                        el.parentElement.classList.remove("_form-focus");
+                        el.classList.remove("_form-focus");
+                        formValidate.removeError(el);
+                    }
+                    let checkboxes = form.querySelectorAll(".checkbox__input");
+                    if (checkboxes.length > 0) for (let index = 0; index < checkboxes.length; index++) {
+                        const checkbox = checkboxes[index];
+                        checkbox.checked = false;
+                    }
+                    if (flsModules.select) {
+                        let selects = form.querySelectorAll(".select");
+                        if (selects.length) for (let index = 0; index < selects.length; index++) {
+                            const select = selects[index].querySelector("select");
+                            flsModules.select.selectBuild(select);
+                        }
+                    }
+                }), 0);
+            },
+            emailTest(formRequiredItem) {
+                return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
+            }
+        };
+        function formSubmit() {
+            const forms = document.forms;
+            if (forms.length) for (const form of forms) {
+                form.addEventListener("submit", (function(e) {
+                    const form = e.target;
+                    formSubmitAction(form, e);
+                }));
+                form.addEventListener("reset", (function(e) {
+                    const form = e.target;
+                    formValidate.formClean(form);
+                }));
+            }
+            async function formSubmitAction(form, e) {
+                const error = !form.hasAttribute("data-no-validate") ? formValidate.getErrors(form) : 0;
+                if (error === 0) {
+                    const ajax = form.hasAttribute("data-ajax");
+                    if (ajax) {
+                        e.preventDefault();
+                        const formAction = form.getAttribute("action") ? form.getAttribute("action").trim() : "#";
+                        const formMethod = form.getAttribute("method") ? form.getAttribute("method").trim() : "GET";
+                        const formData = new FormData(form);
+                        form.classList.add("_sending");
+                        const response = await fetch(formAction, {
+                            method: formMethod,
+                            body: formData
+                        });
+                        if (response.ok) {
+                            let responseResult = await response.json();
+                            form.classList.remove("_sending");
+                            formSent(form, responseResult);
+                        } else {
+                            alert("Ошибка");
+                            form.classList.remove("_sending");
+                        }
+                    } else if (form.hasAttribute("data-dev")) {
+                        e.preventDefault();
+                        formSent(form);
+                    }
+                } else {
+                    e.preventDefault();
+                    if (form.querySelector("._form-error") && form.hasAttribute("data-goto-error")) {
+                        const formGoToErrorClass = form.dataset.gotoError ? form.dataset.gotoError : "._form-error";
+                        gotoBlock(formGoToErrorClass, true, 1e3);
+                    }
+                }
+            }
+            function formSent(form, responseResult = ``) {
+                document.dispatchEvent(new CustomEvent("formSent", {
+                    detail: {
+                        form
+                    }
+                }));
+                setTimeout((() => {
+                    if (flsModules.popup) {
+                        const popup = form.dataset.popupMessage;
+                        popup ? flsModules.popup.open(popup) : null;
+                    }
+                }), 0);
+                formValidate.formClean(form);
+                formLogging(`Форма отправлена!`);
+            }
+            function formLogging(message) {
+                FLS(`[Формы]: ${message}`);
+            }
+        }
         var nouislider = __webpack_require__(211);
         function rangeInit() {
             const priceSlider = document.querySelector("#range");
@@ -6112,7 +6243,7 @@
                         const noHeader = gotoLink.hasAttribute("data-goto-header") ? true : false;
                         const gotoSpeed = gotoLink.dataset.gotoSpeed ? gotoLink.dataset.gotoSpeed : 500;
                         const offsetTop = gotoLink.dataset.gotoTop ? parseInt(gotoLink.dataset.gotoTop) : 0;
-                        gotoblock_gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
+                        gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
                         e.preventDefault();
                     }
                 } else if (e.type === "watcherCallback" && e.detail) {
@@ -6135,7 +6266,7 @@
             if (getHash()) {
                 let goToHash;
                 if (document.querySelector(`#${getHash()}`)) goToHash = `#${getHash()}`; else if (document.querySelector(`.${getHash()}`)) goToHash = `.${getHash()}`;
-                goToHash ? gotoblock_gotoBlock(goToHash, true, 500, 20) : null;
+                goToHash ? gotoBlock(goToHash, true, 500, 20) : null;
             }
         }
         function headerScroll() {
@@ -6274,7 +6405,6 @@
             const nextBtn = document.querySelectorAll(".form-step__btn-next");
             const form = document.querySelector(".calculator__form");
             if (form) {
-                form.addEventListener("submit", (e => e.preventDefault()));
                 let formStep = 0;
                 prevBtn.forEach((prev => {
                     prev.addEventListener("click", (e => {
@@ -6298,31 +6428,27 @@
             }
         }
         stepForm();
-        let oneNumber = document.querySelector(".algorithm-card__number-one");
-        let twoNumber = document.querySelector(".algorithm-card__number-two");
-        if (oneNumber || twoNumber) {
-            let observer = new IntersectionObserver((function(entries) {
-                entries.forEach((function(entry) {
-                    if (entry.isIntersecting) {
-                        const counters = document.querySelectorAll(".anim-number");
-                        const speed = 400;
-                        counters.forEach((counter => {
-                            const animate = () => {
-                                const value = +counter.getAttribute("akhi");
-                                const data = +counter.innerText;
-                                const time = value / speed;
-                                if (data < value) {
-                                    counter.innerText = Math.ceil(data + time);
-                                    setTimeout(animate, 1);
-                                } else counter.innerText = value;
-                            };
-                            animate();
-                        }));
-                    }
-                }));
+        let number_1 = document.querySelector(".algorithm-card__number-one");
+        let number_2 = document.querySelector(".algorithm-card__number-two");
+        if (number_2 || number_1) {
+            let numberTop = number_1.getBoundingClientRect().top;
+            let start_1 = +number_1.innerHTML;
+            let end_1 = +number_1.dataset.max;
+            let start_2 = +number_2.innerHTML;
+            let end_2 = +number_2.dataset.max;
+            window.addEventListener("scroll", (function onScroll() {
+                if (window.scrollY > numberTop - window.innerHeight / 4) {
+                    this.removeEventListener("scroll", onScroll);
+                    let interval_1 = setInterval((function() {
+                        number_1.innerHTML = ++start_1;
+                        if (start_1 == end_1) clearInterval(interval_1);
+                    }), 5);
+                    let interval_2 = setInterval((function() {
+                        number_2.innerHTML = ++start_2;
+                        if (start_2 == end_2) clearInterval(interval_2);
+                    }), 5);
+                }
             }));
-            observer.observe(oneNumber);
-            observer.observe(twoNumber);
         }
         window["FLS"] = true;
         isWebp();
@@ -6333,6 +6459,7 @@
             easing: "ease",
             duration: 1500
         });
+        formSubmit();
         pageNavigation();
         headerScroll();
     })();

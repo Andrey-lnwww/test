@@ -5459,12 +5459,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
         flex-wrap: nowrap;
   }
 
-  .form-submit {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
   .form-progress {
     height: 1.25rem;
   }
@@ -5926,6 +5920,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .form-submit {
     margin-right: 1.875rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .contacts__title {
