@@ -6443,7 +6443,6 @@
                         }));
                     }));
                 }
-                updateCheckbox();
             }
         }
         stepForm();
