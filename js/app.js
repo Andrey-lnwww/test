@@ -6404,6 +6404,7 @@
             const prevBtn = document.querySelectorAll(".form-step__btn-prev");
             const nextBtn = document.querySelectorAll(".form-step__btn-next");
             const form = document.querySelector(".calculator__form");
+            const formStep = form.querySelectorAll(".form-step");
             if (form) {
                 let formStep = 0;
                 prevBtn.forEach((prev => {
@@ -6414,6 +6415,7 @@
                 }));
                 nextBtn.forEach((next => {
                     next.addEventListener("click", (e => {
+                        updateCheckbox();
                         formStep++;
                         updateFormSteps();
                     }));
@@ -6426,6 +6428,23 @@
                 }
                 updateFormSteps();
             }
+            function updateCheckbox() {
+                formStep.forEach((formStepItem => {
+                    const checkboxes = formStepItem.querySelectorAll("input[type=checkbox]");
+                    const nextBtnStep = formStepItem.querySelector(".form-step__btn-next");
+                    if (checkboxes.length >= 0) checkboxes.forEach((checkbox => {
+                        checkbox.addEventListener("change", (e => {
+                            let countCheckbox = 0;
+                            if (checkbox.checked) {
+                                countCheckbox++;
+                                console.log(countCheckbox);
+                            }
+                            if (countCheckbox >= 1) nextBtnStep.removeAttribute("disabled"); else nextBtnStep.setAttribute("disabled", "");
+                        }));
+                    }));
+                }));
+            }
+            updateCheckbox();
         }
         stepForm();
         let oneNumber = document.querySelector(".algorithm-card__number-one");
