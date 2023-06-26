@@ -6428,25 +6428,31 @@
             }
         }
         stepForm();
-        if (number_2 || number_1) {
-            let numberTop = number_1.getBoundingClientRect().top;
-            let start_1 = +number_1.innerHTML;
-            let end_1 = +number_1.dataset.max;
-            let start_2 = +number_2.innerHTML;
-            let end_2 = +number_2.dataset.max;
-            window.addEventListener("scroll", (function onScroll() {
-                if (window.scrollY > numberTop - window.innerHeight / 4) {
-                    this.removeEventListener("scroll", onScroll);
-                    let interval_1 = setInterval((function() {
-                        number_1.innerHTML = ++start_1;
-                        if (start_1 == end_1) clearInterval(interval_1);
-                    }), 5);
-                    let interval_2 = setInterval((function() {
-                        number_2.innerHTML = ++start_2;
-                        if (start_2 == end_2) clearInterval(interval_2);
-                    }), 5);
-                }
+        let oneNumber = document.querySelector(".algorithm-card__number-one");
+        let twoNumber = document.querySelector(".algorithm-card__number-two");
+        if (oneNumber || twoNumber) {
+            let observer = new IntersectionObserver((function(entries) {
+                entries.forEach((function(entry) {
+                    if (entry.isIntersecting) {
+                        const counters = document.querySelectorAll(".anim-number");
+                        const speed = 600;
+                        counters.forEach((counter => {
+                            const animate = () => {
+                                const value = +counter.getAttribute("data-max");
+                                const data = +counter.innerText;
+                                const time = value / speed;
+                                if (data < value) {
+                                    counter.innerText = Math.ceil(data + time);
+                                    setTimeout(animate, 15);
+                                } else counter.innerText = value;
+                            };
+                            animate();
+                        }));
+                    }
+                }));
             }));
+            observer.observe(oneNumber);
+            observer.observe(twoNumber);
         }
         window["FLS"] = true;
         isWebp();
