@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230627120039">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230627125601">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -557,19 +557,19 @@
 											<div class="form-step__wrapper">
 												<h3 class="form-step__title form-step__title--min">Дополнительная информация (не обязательно)</h3>
 												<div class="upload__main-wrapper flex">
-													<label class="form-step__label-text" for="info form-step__label-text">
-														<input class="form-step__input-text" autocomplete="off" type="text" name="info" id="info" data-error="Ошибка">
+													<label class="form-step__label-text">
+														<input class="form-step__input-text" autocomplete="off" type="text" name="info" data-error="Ошибка">
 													</label>
 													<h3 class="form-step__title form-step__title--min form-step__title-invoice">Инвойс, спецификация и
 														др. (не
 														обязательно)
 													</h3>
 													<label class="form-step__label-text form-step__label-text-upload" for="invoice">
-														<div class="upload flex">
+														<span class="upload flex">
 															<span class="upload__icon"></span>
 															<span class="upload__text">Прикрепить материалы</span>
-														</div>
-														<input class="input visually-hidden" autocomplete="off" type="file" name="invoice" id="invoice" data-error="Ошибка">
+														</span>
+														<input class="input visually-hidden" type="file" name="invoice" id="invoice" data-error="Ошибка">
 													</label>
 												</div>
 											</div>
@@ -916,8 +916,8 @@
 							</div>
 						</div>
 					</div>
-					<button type="button" class="swiper-button-prev btn-reset letters__btn letters__btn-prev"></button>
-					<button type="button" class="swiper-button-next btn-reset letters__btn letters__btn-next"></button>
+					<button type="button" class="swiper-button-prev btn-reset letters__btn letters__btn-prev" aria-label="Предыдущий слайд"></button>
+					<button type="button" class="swiper-button-next btn-reset letters__btn letters__btn-next" aria-label="Следующий слайд"></button>
 					<div class="swiper-scrollbar letters__slider-scrollbar" data-da=".letters,1330,1"></div>
 				</div>
 
@@ -1037,7 +1037,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230627120039"></script>
+	<script src="js/app.min.js?_v=20230627125601"></script>
 </body>
 
 </html>

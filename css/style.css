@@ -2454,7 +2454,7 @@ body::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 3.125rem;
+  row-gap: 3.75rem;
 }
 
 .upload__icon {
@@ -2502,6 +2502,10 @@ body::after {
 }
 
 .form-step__title-invoice {
+  margin: 0;
+}
+
+.form-step__title--min {
   margin: 0;
 }
 
