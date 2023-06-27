@@ -6405,16 +6405,18 @@
                 const steps = document.querySelectorAll(".form-step");
                 const prevBtn = document.querySelectorAll(".form-step__btn-prev");
                 const nextBtn = document.querySelectorAll(".form-step__btn-next");
-                form.querySelectorAll(".form-step");
+                const formStep = form.querySelectorAll(".form-step");
                 let formStepCounter = 0;
                 prevBtn.forEach((prev => {
                     prev.addEventListener("click", (e => {
+                        getCheckedCheckBoxes();
                         formStepCounter--;
                         updateFormSteps();
                     }));
                 }));
                 nextBtn.forEach((next => {
                     next.addEventListener("click", (e => {
+                        getCheckedCheckBoxes();
                         formStepCounter++;
                         updateFormSteps();
                     }));
@@ -6426,6 +6428,20 @@
                     }));
                 }
                 updateFormSteps();
+                function getCheckedCheckBoxes() {
+                    formStep.forEach((formStepItem => {
+                        const nextBtnStep = formStepItem.querySelector(".form-step__btn-next");
+                        let checkboxes = formStepItem.querySelectorAll("input[type=checkbox]");
+                        checkboxes.forEach((checkbox => {
+                            checkbox.addEventListener("change", (e => {
+                                let checkboxesChecked = [];
+                                for (let index = 0; index < checkboxes.length; index++) if (checkboxes[index].checked) checkboxesChecked.push(checkboxes[index].value);
+                                if (checkboxesChecked.length <= 0) nextBtnStep.setAttribute("disabled", ""); else nextBtnStep.removeAttribute("disabled");
+                            }));
+                        }));
+                    }));
+                }
+                getCheckedCheckBoxes();
             }
         }
         stepForm();
