@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230627133036">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230627221733">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,7 +66,7 @@
 							завода до двери от 100 кг до 50 тон </span>
 					</div>
 					<div class="preview__content flex">
-						<button class="preview__btn btn-main btn-reset" type="button" aria-label="Оформить заявку" data-aos="zoom-in" data-aos-delay="1250">Оформить
+						<button class="preview__btn btn-main btn-reset" type="button" aria-label="Оформить заявку" data-aos="zoom-in" data-aos-delay="1250" data-goto=".calculator">Оформить
 							заявку</button>
 						<ul class="preview__list list-reset flex">
 							<li class="preview__item flex" data-aos="zoom-in" data-aos-delay="1500">
@@ -89,11 +89,11 @@
 							</li>
 						</ul>
 					</div>
+					<div class="preview__background parallax">
+						<div class="preview__background-image" id="parallax"></div>
+					</div>
 				</div>
-				<div class="preview__background">
-					<div class="preview__background-image" data-prlx-mouse data-prlx-cy="10000"></div>
 
-				</div>
 			</section>
 			<section class="services">
 				<div class="services__container">
@@ -509,7 +509,7 @@
 										<div class="form-step__step flex">
 											<div class="form-step__wrapper">
 												<h3 class="form-step__title">Укажите маршрут перевозки ?</h3>
-												<div class="form-step__content flex form-step__content form-step__content--small">
+												<div class="form-step__content flex form-step__content">
 													<label class="custom-checkbox">
 														<input class="custom-checkbox__field form-step__checkbox visually-hidden" type="checkbox" name="form-calculator" data-error="Ошибка">
 														<span class="custom-checkbox__content">Требуется доставка груза по Китаю</span>
@@ -701,192 +701,53 @@
 					</h3>
 					<p class="partnership__subtitle">При отправках по России небольших <br>
 						партий грузов мы пользуемся услугами этих компаний</p>
-				</div>
-				<div class="partnership__slider swiper" data-aos="zoom-in" data-aos-delay="500">
-					<div class="partnership__wrapper swiper-wrapper">
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
+					<div class="partnership__slider swiper" data-aos="zoom-in" data-aos-delay="500">
+						<div class="partnership__wrapper swiper-wrapper">
+							<div class="partnership__slide swiper-slide">
+								<div class="partnership__image">
+									<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="250" height="150"></picture>
+								</div>
+							</div>
+							<div class="partnership__slide swiper-slide">
+								<div class="partnership__image">
+									<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="250" height="150"></picture>
+								</div>
+							</div>
+							<div class="partnership__slide swiper-slide">
+								<div class="partnership__image">
+									<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="250" height="150"></picture>
+								</div>
+							</div>
+							<div class="partnership__slide swiper-slide">
+								<div class="partnership__image">
+									<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huawei" width="250" height="150"></picture>
+								</div>
+							</div>
+							<div class="partnership__slide swiper-slide">
+								<div class="partnership__image">
+									<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="250" height="150"></picture>
+								</div>
+							</div>
+							<div class="partnership__slide swiper-slide">
+								<div class="partnership__image">
+									<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huavei" width="250" height="150"></picture>
+								</div>
+							</div>
+							<div class="partnership__slide swiper-slide">
+								<div class="partnership__image">
+									<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="250" height="150"></picture>
+								</div>
+							</div>
+							<div class="partnership__slide swiper-slide">
+								<div class="partnership__image">
+									<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huavei" width="250" height="150"></picture>
+								</div>
 							</div>
 						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huavei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huavei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huavei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huavei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huavei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huawei" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
-							</div>
-						</div>
-						<div class="partnership__slide swiper-slide">
-							<div class="partnership__image">
-								<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huavei" width="300" height="150"></picture>
-							</div>
-						</div>
+						<div class="swiper-scrollbar"></div>
 					</div>
-					<div class="swiper-scrollbar"></div>
 				</div>
+
 			</section>
 			<section class="letters">
 				<div class="letters__container">
@@ -895,25 +756,25 @@
 					<div class="letters__slider swiper" data-da=".letters,1330" data-aos="zoom-in" data-aos-delay="500">
 						<div class="letters__wrapper swiper-wrapper">
 							<div class="letters__slide swiper-slide">
-								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="300" height="430"></picture>
+								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="250" height="430"></picture>
 							</div>
 							<div class="letters__slide swiper-slide">
-								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="300" height="430"></picture>
+								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="250" height="430"></picture>
 							</div>
 							<div class="letters__slide swiper-slide">
-								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="300" height="430"></picture>
+								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="250" height="430"></picture>
 							</div>
 							<div class="letters__slide swiper-slide">
-								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="300" height="430"></picture>
+								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="250" height="430"></picture>
 							</div>
 							<div class="letters__slide swiper-slide">
-								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="300" height="430"></picture>
+								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="250" height="430"></picture>
 							</div>
 							<div class="letters__slide swiper-slide">
-								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="300" height="430"></picture>
+								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="250" height="430"></picture>
 							</div>
 							<div class="letters__slide swiper-slide">
-								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="300" height="430"></picture>
+								<picture><source data-srcset="img/letters.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/letters.jpg" alt="Картинка" width="250" height="430"></picture>
 							</div>
 						</div>
 					</div>
@@ -1038,7 +899,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230627133036"></script>
+	<script src="js/app.min.js?_v=20230627221733"></script>
 </body>
 
 </html>
