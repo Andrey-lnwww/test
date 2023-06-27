@@ -1421,6 +1421,7 @@ body::after {
 
 .header {
   padding: 0.9375rem 0rem;
+  background-color: #fff;
 }
 
 .header__container {
@@ -5596,18 +5597,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 @media (min-width: 61.99875em) {
-  .header {
-    position: fixed;
-    width: 100%;
-  }
-
-  .header._header-scroll {
-    z-index: 100;
-    width: 100%;
-    top: 0;
-    background-color: #fff;
-  }
-
   .footer__wrapper {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -5950,6 +5939,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 @media (min-width: 75em) {
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+  }
+
   .header__info {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
