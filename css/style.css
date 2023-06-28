@@ -2247,7 +2247,7 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  row-gap: 1.5625rem;
+  row-gap: 1rem;
 }
 
 .form-step__content--small {
@@ -5332,6 +5332,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     -webkit-column-gap: 1.875rem;
        -moz-column-gap: 1.875rem;
             column-gap: 1.875rem;
+    row-gap: 1.5625rem;
   }
 
   .form-step__list {
@@ -5928,6 +5929,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .form-step__title {
     text-align: left;
+  }
+
+  .form-step__content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-column-gap: 3.125rem;
+       -moz-column-gap: 3.125rem;
+            column-gap: 3.125rem;
   }
 
   .form-step__list {
