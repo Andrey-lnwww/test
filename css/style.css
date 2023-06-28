@@ -3430,6 +3430,11 @@ body::after {
   color: #bababa;
 }
 
+.banner__personal-link {
+  display: inline-block;
+  border-bottom: 1px solid #bababa;
+}
+
 .banner-form {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -6210,12 +6215,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .banner__content {
     padding-top: 3.125rem;
-  }
-
-  .banner__personal {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 
   .banner-form {
