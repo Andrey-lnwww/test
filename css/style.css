@@ -3435,6 +3435,10 @@ body::after {
   border-bottom: 1px solid #bababa;
 }
 
+.banner__image {
+  min-height: 7.3125rem;
+}
+
 .banner-form {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
