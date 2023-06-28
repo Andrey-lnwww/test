@@ -639,7 +639,7 @@ button {
 */
 
 [class*=__container] {
-  max-width: 68.75rem;
+  max-width: 80.625rem;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   margin: 0 auto;
@@ -5717,6 +5717,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 @media (min-width: 61.99875em) {
+  [class*=__container] {
+    padding: 0 4.6875rem;
+  }
+
   .footer__wrapper {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -6063,6 +6067,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 @media (min-width: 75em) {
+  [class*=__container] {
+    padding: 0 9.375rem;
+  }
+
   .header {
     position: fixed;
     width: 100%;
