@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230627233613">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230628090042">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -338,7 +338,7 @@
 										</div>
 									</div>
 									<div class="form-step__btns flex">
-										<button class="form-step__btn btn-main btn-reset form-step__btn-next" type="button" aria-label="Далее" disabled>Далее</button>
+										<button class="form-step__btn btn-reset form-step__btn-next" type="button" aria-label="Далее" disabled>Далее</button>
 									</div>
 								</div>
 							</div>
@@ -387,18 +387,23 @@
 														<span>10 000</span>
 													</div>
 													<div class="range-filter__big" id="range-big"></div>
-													<label class="custom-checkbox range-filter__checkbox">
-														<input class="custom-checkbox__field form-step__checkbox visually-hidden" type="checkbox" name="form-calculator" data-error="Ошибка">
+													<label class="custom-checkbox range-filter__checkbox" for="formNumber">
+														<input class="custom-checkbox__field form-step__checkbox visually-hidden" type="checkbox" name="form-calculator" data-error="Ошибка" id="formNumber">
 														<span class="custom-checkbox__content">Другой вес</span>
 														<span class="custom-checkbox__icon"></span>
 													</label>
+													<div class="form-step__number">
+														<label class="form-step__number-label custom-checkbox__content" for="formNumber">Вес товара
+															(кг)</label>
+														<input class="form-step__input-text form-step__number-input" autocomplete="off" type="number" name="form[number]" data-error="Ошибка">
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="form-step__btns flex">
-										<button class="form-step__btn btn-secondary btn-reset form-step__btn-prev" type="button" aria-label="Назад">Назад</button>
-										<button class="form-step__btn btn-main btn-reset form-step__btn-next" type="button" aria-label="Далее" disabled>Далее</button>
+										<button class="form-step__btn btn-reset form-step__btn-prev" type="button" aria-label="Назад">Назад</button>
+										<button class="form-step__btn btn-reset form-step__btn-next" type="button" aria-label="Далее" disabled>Далее</button>
 									</div>
 								</div>
 							</div>
@@ -479,8 +484,8 @@
 										</div>
 									</div>
 									<div class="form-step__btns flex">
-										<button class="form-step__btn btn-secondary btn-reset form-step__btn-prev" type="button" aria-label="Назад">Назад</button>
-										<button class="form-step__btn btn-main btn-reset form-step__btn-next" type="button" aria-label="Далее" disabled>Далее</button>
+										<button class="form-step__btn btn-reset form-step__btn-prev" type="button" aria-label="Назад">Назад</button>
+										<button class="form-step__btn btn-reset form-step__btn-next" type="button" aria-label="Далее" disabled>Далее</button>
 									</div>
 								</div>
 							</div>
@@ -525,8 +530,8 @@
 										</div>
 									</div>
 									<div class="form-step__btns flex">
-										<button class="form-step__btn btn-secondary btn-reset form-step__btn-prev" type="button" aria-label="Назад">Назад</button>
-										<button class="form-step__btn btn-main btn-reset form-step__btn-next" type="button" aria-label="Далее" disabled>Далее</button>
+										<button class="form-step__btn btn-reset form-step__btn-prev" type="button" aria-label="Назад">Назад</button>
+										<button class="form-step__btn btn-reset form-step__btn-next" type="button" aria-label="Далее" disabled>Далее</button>
 									</div>
 								</div>
 
@@ -577,8 +582,8 @@
 										</div>
 									</div>
 									<div class="form-step__btns flex">
-										<button class="form-step__btn btn-secondary btn-reset form-step__btn-prev" type="button" aria-label="Назад">Назад</button>
-										<button class="form-step__btn btn-main btn-reset form-step__btn-next" type="button" aria-label="Далее">Далее</button>
+										<button class="form-step__btn btn-reset form-step__btn-prev" type="button" aria-label="Назад">Назад</button>
+										<button class="form-step__btn btn-reset form-step__btn-next" type="button" aria-label="Далее">Далее</button>
 									</div>
 								</div>
 							</div>
@@ -899,7 +904,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230627233613"></script>
+	<script src="js/app.min.js?_v=20230628090042"></script>
 </body>
 
 </html>

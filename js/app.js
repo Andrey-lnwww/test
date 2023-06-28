@@ -6406,6 +6406,11 @@
                 const prevBtn = document.querySelectorAll(".form-step__btn-prev");
                 const nextBtn = document.querySelectorAll(".form-step__btn-next");
                 const formStep = form.querySelectorAll(".form-step");
+                const formNumber = form.querySelector("#formNumber");
+                const formNumberWrapper = form.querySelector(".form-step__number");
+                if (formNumber) formNumber.addEventListener("change", (e => {
+                    if (formNumber.checked) formNumberWrapper.classList.add("form-step__number--active"); else formNumberWrapper.classList.remove("form-step__number--active");
+                }));
                 let formStepCounter = 0;
                 prevBtn.forEach((prev => {
                     prev.addEventListener("click", (e => {
