@@ -5264,6 +5264,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     padding: 0.625rem 1.5rem 2.125rem 0;
   }
 
+  .menu__item {
+    padding: 0.9375rem 1.25rem;
+  }
+
   .info__wrapper {
     -webkit-column-gap: 0.9375rem;
        -moz-column-gap: 0.9375rem;
@@ -5509,10 +5513,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     -webkit-column-gap: 1rem;
        -moz-column-gap: 1rem;
             column-gap: 1rem;
-  }
-
-  .menu__item {
-    padding: 0.9375rem 1.25rem;
   }
 
   .info {
