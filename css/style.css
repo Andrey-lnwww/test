@@ -2322,6 +2322,9 @@ body::after {
 
 .form-step__btn-prev::after {
   background: url("../img/svg/button-decor--black.svg") 0 0 no-repeat;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .form-step__range {
