@@ -1855,6 +1855,15 @@ body::after {
   height: 100%;
   min-height: 18.75rem;
   border-radius: 0.625rem;
+  opacity: 0;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+  -webkit-animation-delay: 2.75s;
+          animation-delay: 2.75s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .services__container {
@@ -2850,6 +2859,7 @@ body::after {
 }
 
 .partnership__slider .swiper-slide {
+  width: 9.0625rem;
   margin-left: 1.25rem;
   width: auto;
 }
@@ -2859,7 +2869,7 @@ body::after {
 }
 
 .partnership__image {
-  max-width: 9.375rem;
+  max-width: 9.0625rem;
 }
 
 .letters {
@@ -5678,6 +5688,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .partnership__subtitle {
     margin-bottom: 3.4375rem;
+  }
+
+  .partnership__slider .swiper-slide {
+    width: 18.75rem;
   }
 
   .partnership__wrapper {
