@@ -2167,6 +2167,8 @@ body::after {
       -ms-flex-order: -1;
           order: -1;
   margin-bottom: 1.25rem;
+  max-width: 360px;
+  min-width: 300px;
 }
 
 .calculator__image-ibg {
@@ -2264,8 +2266,8 @@ body::after {
 }
 
 .form-step__btn {
-  padding: 1.25rem 6.03125rem;
-  font-size: 1.5rem;
+  padding: 0.9375rem 6.03125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   -webkit-column-gap: 0.625rem;
      -moz-column-gap: 0.625rem;
@@ -2560,7 +2562,6 @@ body::after {
 
 .form-step__description {
   margin: 0;
-  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -2589,8 +2590,7 @@ body::after {
 
 .form-step__number {
   position: relative;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2.5rem;
   display: none;
   opacity: 0;
   -webkit-transition: all 0.3s ease 0s;
@@ -2612,6 +2612,7 @@ body::after {
 
 .form-step__number-input {
   outline: none;
+  max-width: none;
 }
 
 .form-phone__input {
@@ -5300,7 +5301,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
         -ms-flex-order: 0;
             order: 0;
     width: 100%;
-    max-width: 360px;
     min-width: 360px;
   }
 
@@ -5334,6 +5334,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .form-step__list {
     row-gap: 1.5625rem;
+  }
+
+  .form-step__btn {
+    padding: 1.25rem 6.03125rem;
+    font-size: 1.5rem;
   }
 
   .form-progress {
@@ -5954,6 +5959,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .form-step__description {
     text-align: left;
+  }
+
+  .form-step__number {
+    margin-bottom: 2.5rem;
   }
 
   .form-submit {
