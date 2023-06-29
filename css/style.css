@@ -1354,11 +1354,9 @@ body::after {
   background: url("../img/svg/button-decor.svg") 0 0 no-repeat;
   width: 1.5rem;
   height: 1.5rem;
-  -webkit-transition: -webkit-transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s;
-  -o-transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .btn-main:disabled {
@@ -1509,6 +1507,15 @@ body::after {
   width: 2.25rem;
   height: 2.25rem;
   z-index: 6;
+}
+
+.btn-wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .header {
@@ -1901,15 +1908,7 @@ body::after {
   -webkit-column-gap: 0.625rem;
      -moz-column-gap: 0.625rem;
           column-gap: 0.625rem;
-  width: 100%;
   font-weight: 600;
-  margin: 0 auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .preview__background {
@@ -5427,6 +5426,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     padding: 0.625rem 1.5rem 2.125rem 0;
   }
 
+  .btn-wrapper {
+    width: 100%;
+  }
+
   .menu__item {
     padding: 0.9375rem 1.25rem;
   }
@@ -5474,10 +5477,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .preview__item {
     min-width: 21.875rem;
-  }
-
-  .preview__btn {
-    width: auto;
   }
 
   .services-item__title {
@@ -6148,6 +6147,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 @media (min-width: 87.5em) {
+  .btn-wrapper {
+    width: auto;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+
   .header {
     padding: 0.9375rem 0rem;
     position: fixed;
@@ -6176,12 +6181,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-  }
-
-  .preview__btn {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    margin: 0;
   }
 
   .algorithm__wrapper {
