@@ -2682,10 +2682,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.form-step__title--min {
-  margin: 0;
-}
-
 .form-step__description {
   margin: 0;
 }
@@ -3277,6 +3273,11 @@ input::-webkit-inner-spin-button {
 
 .address__text {
   font-size: 1.125rem;
+}
+
+.policy__description,
+.contract__description {
+  margin: 0;
 }
 
 .blog__breadcrumbs {
@@ -5556,6 +5557,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     row-gap: 2.5rem;
   }
 
+  .form-step__title--min {
+    margin: 0;
+  }
+
   .form-progress {
     height: 0.625rem;
   }
@@ -5820,7 +5825,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .upload {
-    row-gap: 3.75rem;
+    row-gap: 3.125rem;
   }
 
   .form-step__number {
@@ -6219,6 +6224,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     -webkit-column-gap: 3.125rem;
        -moz-column-gap: 3.125rem;
             column-gap: 3.125rem;
+  }
+
+  .form-step__content-range {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .form-step__list {
