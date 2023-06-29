@@ -3285,6 +3285,10 @@ input::-webkit-inner-spin-button {
   margin-bottom: 1.875rem;
 }
 
+.blog__content {
+  margin-bottom: 1.875rem;
+}
+
 .blog__header {
   position: relative;
   padding-bottom: 1.875rem;
