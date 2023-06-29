@@ -6433,6 +6433,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 @media (any-hover: hover) {
   .btn-main:hover {
     background-color: #c30b0b;
+    -webkit-transition: background-color 0.3s ease 0s;
+    -o-transition: background-color 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
   }
 
   .link-anim:hover::after {
