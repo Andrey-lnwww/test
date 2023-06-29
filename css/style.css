@@ -1682,6 +1682,10 @@ body::after {
   font-weight: 600;
 }
 
+.footer {
+  position: relative;
+}
+
 .footer__wrapper {
   margin-bottom: 1.25rem;
   -ms-flex-wrap: wrap;
