@@ -6400,17 +6400,24 @@
         const da = new DynamicAdapt("max");
         da.init();
         function stepForm() {
-            const form = document.querySelector(".calculator__form");
+            const form = document.querySelector(".quiz__form");
             if (form) {
                 const steps = document.querySelectorAll(".form-step");
                 const prevBtn = document.querySelectorAll(".form-step__btn-prev");
                 const nextBtn = document.querySelectorAll(".form-step__btn-next");
                 const formStep = form.querySelectorAll(".form-step");
-                const formNumber = form.querySelector("#formNumber");
-                const formNumberWrapper = form.querySelector(".form-step__number");
-                if (formNumber) formNumber.addEventListener("change", (e => {
-                    if (formNumber.checked) formNumberWrapper.classList.add("form-step__number--active"); else formNumberWrapper.classList.remove("form-step__number--active");
-                }));
+                const formNumberWeight = form.querySelector(".form-step__number--weight");
+                const formNumberBulk = form.querySelector(".form-step__number--bulk");
+                const formWeight = form.querySelector("#formWeight");
+                const formBulk = form.querySelector("#formBulk");
+                if (formWeight || formBulk) {
+                    formWeight.addEventListener("change", (e => {
+                        if (formWeight.checked) formNumberWeight.classList.add("form-step__number--active"); else formNumberWeight.classList.remove("form-step__number--active");
+                    }));
+                    formBulk.addEventListener("click", (e => {
+                        if (formBulk.checked) formNumberBulk.classList.add("form-step__number--active"); else formNumberBulk.classList.remove("form-step__number--active");
+                    }));
+                }
                 let formStepCounter = 0;
                 prevBtn.forEach((prev => {
                     prev.addEventListener("click", (e => {
@@ -6483,7 +6490,7 @@
             disable: "phone",
             once: true,
             easing: "ease",
-            duration: 1500
+            duration: 1e3
         });
         formSubmit();
         pageNavigation();
