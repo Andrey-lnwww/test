@@ -8587,7 +8587,6 @@
                 if (quizPhone) {
                     quizPhone.addEventListener("input", (e => {
                         let length = quizPhone.value.length;
-                        console.log(length);
                         if (length < 16) formSubmit.setAttribute("disabled", "");
                         if (length == 16) formSubmit.removeAttribute("disabled");
                     }));
