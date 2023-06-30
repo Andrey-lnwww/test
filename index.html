@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230629181211">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230630085305">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -622,18 +622,19 @@
 											<div class="form-step__step flex">
 												<div class="form-step__wrapper form-step__wrapper-phone">
 													<h3 class="form-step__title form-step__title--last">Мы уже начали расчёт стоимости доставки</h3>
-													<p class="form-step__description">Нажмите кнопку "ПОЛУЧИТЬ РАСЧЕТ" и мысообщим вам его результаты по
+													<p class="form-step__description">Нажмите кнопку "ПОЛУЧИТЬ РАСЧЕТ" и мы сообщим вам его результаты
+														по
 														телефону
 													</p>
 												</div>
 											</div>
 										</div>
 										<div class="form-submit flex form-step__btns">
-											<button class="btn-main btn-reset form-submit__btn" type="submit" aria-label="Получить расчет">Получить
+											<button class="btn-main btn-reset form-submit__btn" type="submit" aria-label="Получить расчет" disabled>Получить
 												расчет</button>
 											<div class="form-step__phone form-phone form-submit__phone">
 												<label class="form-phone__label visually-hidden" for="phone">Номер телефона</label>
-												<input class="form-phone__input input-reset" autocomplete="off" type="text" name="phone" id="phone" data-error="Ошибка" placeholder="Номер телефона*" required>
+												<input class="form-phone__input input-reset" autocomplete="off" type="tel" name="phone" id="phone" data-error="Ошибка" placeholder="Номер телефона*" required>
 											</div>
 										</div>
 									</div>
@@ -818,7 +819,7 @@
 											<input autocomplete="off" type="text" name="name" id="name" data-error="Ошибка" placeholder="Имя" class="input input-reset form__input delivery-form__input">
 										</label>
 										<label class="delivery-form__label" for="delivery-phone">
-											<input autocomplete="off" type="text" name="delivery-phone" id="delivery-phone" data-error="Ошибка" placeholder="Телефон*" class="input input-reset form__input delivery-form__input" required>
+											<input autocomplete="off" type="tel" name="delivery-phone" id="delivery-phone" data-error="Ошибка" placeholder="Телефон*" class="input input-reset form__input delivery-form__input" required>
 										</label>
 										<button class="btn-reset btn-main delivery-form__btn" type="submit">Оставить заявку</button>
 										<p class="delivery-form__personal">Нажимая кнопку, вы даете согласия
@@ -968,7 +969,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230629181211"></script>
+	<script src="js/app.min.js?_v=20230630085305"></script>
 </body>
 
 </html>
