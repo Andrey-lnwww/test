@@ -2746,7 +2746,7 @@ input::-webkit-inner-spin-button {
 
 .form-phone__input {
   display: block;
-  padding: 1.25rem 1.875rem;
+  padding: 1.25rem 0.9375rem;
   border-radius: 0.625rem;
   border: 1px solid #000;
   background: #fff;
@@ -2754,6 +2754,20 @@ input::-webkit-inner-spin-button {
   outline-color: #000;
   min-width: 18.75rem;
   min-height: 4.375rem;
+}
+
+@supports (font-size: clamp( 1.125rem , 0.9951923077rem  +  0.5769230769vw , 1.5rem )) {
+  .form-phone__input {
+    font-size: clamp( 1.125rem , 0.9951923077rem  +  0.5769230769vw , 1.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.125rem , 0.9951923077rem  +  0.5769230769vw , 1.5rem )) {
+  .form-phone__input {
+    font-size: calc(
+			1.125rem + 0.375 * (100vw - 22.5rem) / 65
+		);
+  }
 }
 
 .form-phone__input::-webkit-input-placeholder {
@@ -2774,52 +2788,6 @@ input::-webkit-inner-spin-button {
 
 .form-phone__input::placeholder {
   color: #bababa;
-}
-
-@supports (font-size: clamp( 1.125rem , 0.9951923077rem  +  0.5769230769vw , 1.5rem )) {
-  .form-phone__input::-webkit-input-placeholder {
-    font-size: clamp( 1.125rem , 0.9951923077rem  +  0.5769230769vw , 1.5rem );
-  }
-  .form-phone__input::-moz-placeholder {
-    font-size: clamp( 1.125rem , 0.9951923077rem  +  0.5769230769vw , 1.5rem );
-  }
-  .form-phone__input:-ms-input-placeholder {
-    font-size: clamp( 1.125rem , 0.9951923077rem  +  0.5769230769vw , 1.5rem );
-  }
-  .form-phone__input::-ms-input-placeholder {
-    font-size: clamp( 1.125rem , 0.9951923077rem  +  0.5769230769vw , 1.5rem );
-  }
-  .form-phone__input::placeholder {
-    font-size: clamp( 1.125rem , 0.9951923077rem  +  0.5769230769vw , 1.5rem );
-  }
-}
-
-@supports not (font-size: clamp( 1.125rem , 0.9951923077rem  +  0.5769230769vw , 1.5rem )) {
-  .form-phone__input::-webkit-input-placeholder {
-    font-size: calc(
-			1.125rem + 0.375 * (100vw - 22.5rem) / 65
-		);
-  }
-  .form-phone__input::-moz-placeholder {
-    font-size: calc(
-			1.125rem + 0.375 * (100vw - 22.5rem) / 65
-		);
-  }
-  .form-phone__input:-ms-input-placeholder {
-    font-size: calc(
-			1.125rem + 0.375 * (100vw - 22.5rem) / 65
-		);
-  }
-  .form-phone__input::-ms-input-placeholder {
-    font-size: calc(
-			1.125rem + 0.375 * (100vw - 22.5rem) / 65
-		);
-  }
-  .form-phone__input::placeholder {
-    font-size: calc(
-			1.125rem + 0.375 * (100vw - 22.5rem) / 65
-		);
-  }
 }
 
 .form-submit {
@@ -5846,6 +5814,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .form-step__number {
     margin-bottom: 2.5rem;
+  }
+
+  .form-phone__input {
+    padding: 1.25rem 1.875rem;
   }
 
   .form-progress {
