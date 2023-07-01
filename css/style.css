@@ -1925,6 +1925,9 @@ body::after {
   height: 100%;
   min-height: 18.75rem;
   border-radius: 0.625rem;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .services__container {
@@ -2478,7 +2481,6 @@ input::-webkit-inner-spin-button {
       -ms-grid-row-align: center;
       align-self: center;
   width: 100%;
-  max-width: 46.25rem;
 }
 
 .form-step__label-text-upload {
@@ -2744,6 +2746,10 @@ input::-webkit-inner-spin-button {
   color: #bababa;
 }
 
+.form-step .form-step__additional {
+  margin-bottom: 1.25rem;
+}
+
 .form-phone__input {
   display: block;
   padding: 1.25rem 0.9375rem;
@@ -2855,6 +2861,10 @@ input::-webkit-inner-spin-button {
 
 .form-progress__step--six {
   width: 100%;
+}
+
+.additional__title {
+  margin-bottom: 0.625rem;
 }
 
 .gallery__container {
@@ -5531,6 +5541,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .form-step__input-text {
     min-height: 3.125rem;
+    display: block;
+    margin: 0 auto;
   }
 
   .range-filter__value {
@@ -5542,7 +5554,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .form-step__title--min {
-    margin: 0;
+    margin-bottom: 1.25rem;
   }
 
   .form-progress {
@@ -5822,6 +5834,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .form-progress {
     height: 0.9375rem;
+  }
+
+  .additional__title {
+    margin-bottom: 1.25rem;
   }
 
   .gallery__container {
@@ -6244,11 +6260,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .form-step__input-text {
     max-width: 46.25rem;
+    margin: 0;
   }
 
   .form-step__label-text {
     -ms-flex-item-align: start;
         align-self: flex-start;
+    max-width: 46.25rem;
   }
 
   .upload__wrapper {

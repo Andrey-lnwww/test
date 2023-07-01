@@ -8627,7 +8627,7 @@
                         const nextBtnStep = formStepItem.querySelector(".form-step__btn-next");
                         let checkboxes = formStepItem.querySelectorAll("input[type=checkbox]");
                         checkboxes.forEach((checkbox => {
-                            checkbox.addEventListener("change", (e => {
+                            if (!checkbox.classList.contains("optional")) checkbox.addEventListener("change", (e => {
                                 let checkboxesChecked = [];
                                 for (let index = 0; index < checkboxes.length; index++) if (checkboxes[index].checked) checkboxesChecked.push(checkboxes[index].value);
                                 if (checkboxesChecked.length <= 0) nextBtnStep.setAttribute("disabled", ""); else nextBtnStep.removeAttribute("disabled");

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230630085832">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230701091620">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -380,7 +380,7 @@
 														</div>
 														<div class="range-filter__small" id="range"></div>
 														<label class="custom-checkbox range-filter__checkbox" for="formBulk">
-															<input class="custom-checkbox__field form-step__checkbox visually-hidden" type="checkbox" name="form-quiz" data-error="Ошибка" id="formBulk">
+															<input class="custom-checkbox__field form-step__checkbox visually-hidden optional" type="checkbox" name="form-quiz" data-error="Ошибка" id="formBulk">
 															<span class="custom-checkbox__content range-filter__checkbox-content">Другой объём</span>
 															<span class="custom-checkbox__icon"></span>
 														</label>
@@ -399,7 +399,7 @@
 														</div>
 														<div class="range-filter__big" id="range-big"></div>
 														<label class="custom-checkbox range-filter__checkbox" for="formWeight">
-															<input class="custom-checkbox__field form-step__checkbox visually-hidden" type="checkbox" name="form-quiz" data-error="Ошибка" id="formWeight">
+															<input class="custom-checkbox__field form-step__checkbox visually-hidden optional" type="checkbox" name="form-quiz" data-error="Ошибка" id="formWeight">
 															<span class="custom-checkbox__content range-filter__checkbox-content">Другой вес</span>
 															<span class="custom-checkbox__icon"></span>
 														</label>
@@ -413,7 +413,7 @@
 										</div>
 										<div class="form-step__btns flex">
 											<button class="form-step__btn btn-reset form-step__btn-prev" type="button" aria-label="Назад">Назад</button>
-											<button class="form-step__btn btn-reset form-step__btn-next" type="button" aria-label="Далее" disabled>Далее</button>
+											<button class="form-step__btn btn-reset form-step__btn-next" type="button" aria-label="Далее">Далее</button>
 										</div>
 									</div>
 								</div>
@@ -571,12 +571,14 @@
 										<div class="quiz__bottom">
 											<div class="form-step__step flex">
 												<div class="form-step__wrapper">
-													<h3 class="form-step__title form-step__title--min">Дополнительная информация (не обязательно)</h3>
-													<div class="upload flex">
+													<div class="form-step__additional additional">
+														<h3 class="form-step__title additional__title">Дополнительная информация (не обязательно)</h3>
 														<label class="form-step__label-text">
 															<input class="form-step__input-text" autocomplete="off" type="text" name="info" data-error="Ошибка">
 														</label>
-														<h3 class="form-step__title form-step__title--min form-step__title-invoice">Инвойс, спецификация и
+													</div>
+													<div class="form-step__upload upload flex">
+														<h3 class="form-step__title form-step__title-invoice">Инвойс, спецификация и
 															др. (не
 															обязательно)
 														</h3>
@@ -732,17 +734,17 @@
 							</div>
 							<div class="partnership__slide swiper-slide">
 								<div class="partnership__image">
-									<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
-								</div>
-							</div>
-							<div class="partnership__slide swiper-slide">
-								<div class="partnership__image">
 									<picture><source data-srcset="img/partnership3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership3.jpg" alt="Huawei" width="300" height="150"></picture>
 								</div>
 							</div>
 							<div class="partnership__slide swiper-slide">
 								<div class="partnership__image">
 									<picture><source data-srcset="img/partnership2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership2.jpg" alt="Dole" width="300" height="150"></picture>
+								</div>
+							</div>
+							<div class="partnership__slide swiper-slide">
+								<div class="partnership__image">
+									<picture><source data-srcset="img/partnership1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/partnership1.jpg" alt="Huawei" width="300" height="150"></picture>
 								</div>
 							</div>
 							<div class="partnership__slide swiper-slide">
@@ -969,7 +971,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230630085832"></script>
+	<script src="js/app.min.js?_v=20230701091620"></script>
 </body>
 
 </html>
